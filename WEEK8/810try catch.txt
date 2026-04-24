@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        
+        try {
+            // Read the two integers
+            int x = sc.nextInt();
+            int y = sc.nextInt();
+            
+            // Perform division and print result
+            System.out.println(x / y);
+            
+        } catch (InputMismatchException e) {
+            // Requirement: Print the class name for input errors
+            System.out.println(e.getClass().getName());
+        } catch (ArithmeticException e) {
+            // Requirement: Print the exception object (includes "/ by zero")
+            System.out.println(e);
+        } catch (Exception e) {
+            // Catch-all for any other potential issues
+            System.out.println(e);
+        } finally {
+            sc.close();
+        }
+    }
+    
+}
